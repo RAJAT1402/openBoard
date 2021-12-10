@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./Icons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <title>OpenBoard</title>
+</head>
+<body>
+    <div class="options">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools scale-tools">
+        <img class="pencil selected" src="Images/pencil.png" title="Pencil">
+        <img class="eraser" src="Images/eraser.png" title="Eraser">
+        <img class="shapes" src="Images/shape.png" title="Shapes">
+        <div class = "color-container">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+        </div>
+        <div class="size-box">
+            <div class="size1 size"></div>
+            <div class="size2 size"></div>
+            <div class="size3 size"></div>
+            <div class="size4 size"></div>
+        </div>
+        
+        <img class="redo" src="Images/redo.png" title="Redo">
+        <img class="undo" src="Images/undo.png" title="Undo">
+        <img class="notes" src="Images/sticky-notes.png" title="Notes">
+        <img class="upload" src="Images/upload.png" title="Upload">
+        <img class="download" src="Images/download.png" title="Download">
+        <img class="dustbin" src="Images/Dustbin.png" title="Clear-All">
+        <img class="theme" src="Images/moon.png">
+    </div>
+    <div class="shapes-container">
+        <img class="line selected" src="Images/diagonal-line.png" title="Straight-Line">
+        <img class="square" src="Images/square.png">
+        <img class="rhombus" src="Images/rhombus.png">
+        <img class="circle" src="Images/circle.png">
+        <img class="triangle" src="Images/triangle.png">
+        <img class="arrow" src="Images/arrow.png">
+    </div>
+
+    <div class="pages">
+        <div class="previousPage changePage">
+            <img src="Images/back.png">
+        </div>
+        <div class="currentPage">
+            <p>1/1</p>
+        </div>
+        <div class="nextPage changePage">
+            <img src="Images/next.png">
+        </div>
+    </div>
+    <!-- <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencil-width">
+        </div> -->
+        <!-- <div class="pencil-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div> -->
+    <!-- </div>
+    <div class="eraser-tool-cont">
+        <input type="range" min="2" max="10" value="3" class="eraser-width">
+    </div> -->
+
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:3000");
+    </script>
+    <script src="./tool.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>

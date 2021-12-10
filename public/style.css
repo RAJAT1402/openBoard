@@ -1,0 +1,298 @@
+/* *********************************************General Styling***************************************************** */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+canvas{
+    /* margin-top: 4rem; */
+    background-color: white;
+}
+/* ******************************************** Tool Bar *********************************************************** */
+.options{
+    height: 4rem;
+    width: 3.5rem;
+    /* background-color: #f1f2f6; */
+    background-color: lightgray;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    /* border-radius: 50%; */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+.tools {
+    display: flex;
+    height: 4rem;
+    width: calc(100vw - 3.5rem);
+    /* background-color: #f1f2f6; */
+    /* background-color: lightgray; */
+    background-color: #f1f2f6;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 10;
+    /* top: 2rem; */
+    /* padding: 0.8rem; */
+    left: 3.5rem;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+.tools>*{
+    padding: 0.8rem;
+}
+
+
+.scale-tools {
+    animation-name: scale-tools;
+    animation-duration: 1.5s;
+}
+@keyframes scale-tools {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.color-container{
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    /* padding: 1rem; */
+    /* overflow: hidden; */
+    /* border: 1px solid black; */
+}
+.color-container>*{
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.5px solid black;
+}
+
+.size-box {
+    /* padding: 1rem; */
+    width: 8rem;
+    /* height: 40px; */
+    border: 1px solid black;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    /* display: none; */
+}
+
+.size {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.size1 {
+    height: 10px;
+    width: 10px;
+}
+
+.size2 {
+    height: 14px;
+    width: 14px;
+}
+
+.size3 {
+    height: 18px;
+    width: 18px;
+}
+
+.size4 {
+    height: 22px;
+    width: 22px;
+}
+
+.shapes-container{
+    height: 5rem;
+    width: 7rem;
+    position: absolute;
+    z-index: 10;
+    left: 20rem;
+    top: 5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: none;
+    background-color: #f1f2f6;
+    /* background-color: lightgray; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.shapes-container > * {
+    height: 2rem;
+    width: 2963.rem;
+    /* margin-right: 10px; */
+    padding: 3px;
+}
+.pencil-tool-cont {
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 5rem;
+    width: 7rem;
+    position: absolute;
+    top: 5rem;
+    left: 4rem;
+    border-radius: 3px;
+    display: none;
+}
+.pencil-width-cont {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pencil-width-cont input {
+    width: 80%;
+}
+.pencil-color-cont {
+    background-color: lightgray;
+    height: calc( 100% - 2rem );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.pencil-color {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.color1 {
+    background-color: black;
+}
+.color2 {
+    background-color: blue;
+}
+.color3 {
+    background-color: red;
+}
+
+/* .white{
+    background-color: white;
+}
+
+.yellow{
+    background-color: yellow;
+} */
+.eraser-tool-cont {
+    height: 2rem;
+    width: 7rem;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5rem;
+    left: 13rem;
+}
+.eraser-tool-cont input {
+    width: 80%;
+}
+
+.sticky{
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+}
+.header{
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f1f2f6;
+    cursor:grab;
+}
+.header > * {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+.minimize {
+    background-color: #2ed573;
+}
+.remove {
+    background-color: #ff4757;
+}
+.note-cont {
+    height: calc( 100% - 2rem );
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.note-cont > *{
+    width: 100%;
+    height: 100%;
+}
+
+.selected{
+    background-color: lightgray;
+}
+
+.pages{
+    border-radius: 10px;
+    position : absolute;
+    z-index: 10;
+    /* top: calc(100vh - 3rem); */
+    left: 45vw;
+    bottom: 2px;
+    padding: 20px;
+    /* height: 2rem;
+    width: 5rem; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    background-color: white;
+}
+
+.changePage{
+    width: 2rem;
+    height: 2rem;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.changePage>img{
+    height: 80%;
+    width: 80%;
+}
+
+.currentPage{
+    margin: 2px 5px;
+    height: 2rem;
+    width: 4rem;
+    box-shadow: black 0px 0px 0px 2px inset, rgb(255, 255, 255) 5px -5px 0px -3px, rgb(31, 193, 27) 5px -5px, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(255, 217, 19) 10px -10px;
+}
+
+.currentPage>p{
+    margin: 6px 15px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nextPage{
+    margin-left: 7px;
+}
