@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./Icons/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/whiteboard.png" type="image/x-icon">
     <title>OpenBoard</title>
 </head>
 <body>
@@ -74,7 +75,7 @@
     <canvas></canvas>
     <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
     <script>
-        let socket = io.connect("http://localhost:3000");
+        let socket = io.connect("https://rg-openboard.herokuapp.com");
     </script>
     <script src="./tool.js"></script>
     <script src="./canvas.js"></script>
