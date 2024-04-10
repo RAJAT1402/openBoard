@@ -7,6 +7,7 @@ let drawingMode = false;
 let iX,iY,fX,fY;
 let ctheme = true;
 
+//pagintion
 let previousPage = document.querySelector(".previousPage");
 let nextPage = document.querySelector(".nextPage");
 let currentPage = document.querySelector(".currentPage>p")
