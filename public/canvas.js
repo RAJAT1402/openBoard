@@ -220,6 +220,7 @@ undo.addEventListener("click", (e) => {
     socket.emit("redoUndo", data)
     // undoRedoCanvas(data);
 })
+
 redo.addEventListener("click", (e) => {
     if (track < undoRedoTracker.length-1) track++;
     // track action
@@ -321,7 +322,7 @@ function pageChange(data){
 }
 
 previousPage.addEventListener("click", ()=>{
-    
+
     // if(pageTracker == pageTracker.length - 1){
     //     pagesArr.push(undoRedoTracker)
     //     pageTracker++;
