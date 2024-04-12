@@ -43,7 +43,10 @@ options.addEventListener("click", ()=>{
 })
 
 pencil.addEventListener("click", () => {
+
     shapeContainer.style.display = "none";
+    canvas.classList.add("cursor1");
+    canvas.classList.remove("cursor2");
     let selectedItem = toolBar.querySelector(".selected");
     selectedItem.classList.remove("selected");
     pencil.classList.add("selected");
@@ -53,6 +56,8 @@ pencil.addEventListener("click", () => {
 
 eraser.addEventListener("click", () => {
     shapeContainer.style.display = "none";
+    canvas.classList.add("cursor2");
+    canvas.classList.remove("cursor1");
     let selectedItem = toolBar.querySelector(".selected");
     selectedItem.classList.remove("selected");
     eraser.classList.add("selected");
@@ -64,6 +69,8 @@ shapes.addEventListener("click", ()=>{
     let selectedItem = toolBar.querySelector(".selected");
     selectedItem.classList.remove("selected");
     shapes.classList.add("selected");
+    canvas.classList.add("cursor1");
+    canvas.classList.remove("cursor2");
     shape = !shape;
     if(shape){
         shapeContainer.style.display = "flex";
@@ -80,6 +87,7 @@ shapes.addEventListener("click", ()=>{
     // })
     
     line.addEventListener("click", () =>{
+    
     let selectedItem = shapeContainer.querySelector(".selected");
     selectedItem.classList.remove("selected");
     line.classList.add("selected");

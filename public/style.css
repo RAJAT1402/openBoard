@@ -179,13 +179,14 @@ canvas{
     background-color: red;
 }
 
-/* .white{
-    background-color: white;
+.cursor1 {
+    cursor: url(Images/Pencil1.cur), auto !important;
 }
 
-.yellow{
-    background-color: yellow;
-} */
+.cursor2 {
+    cursor: url(Images/Eraser2.cur), auto !important;
+}
+
 .eraser-tool-cont {
     height: 2rem;
     width: 7rem;

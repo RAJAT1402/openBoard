@@ -17,6 +17,7 @@ let pagesArr = [];
 let undoRedoTracker = []; //Data
 let track = 0; // Represent which action from tracker array
 // pagesArr.push(undoRedoTracker);
+canvas.classList.add("cursor1");
 let cColor = "black";
 let cSize = 3;
 
