@@ -10,14 +10,23 @@
     <link rel="icon" href="Images/whiteboard.png" type="image/x-icon">
     <title>OpenBoard</title>
     <script defer src="https://umami-analytics-openboard.vercel.app/script.js" data-website-id="5f76356d-7072-46bb-930e-04897fb5d72f"></script>
+   <script>
+        window.addEventListener("load", () => {
+            umami.track('event1');
+            umami.track('event2');
+            umami.track('event3');
+            umami.track('event4');
+        });
+    </script>
+
 </head>
 <body>
     <div class="options">
         <i class="fas fa-bars"></i>
     </div>
     <div class="tools scale-tools">
-        <img class="pencil selected" src="Images/pencil.png" title="Pencil">
-        <img class="eraser" src="Images/eraser.png" title="Eraser">
+        <img class="pencil selected" src="Images/pencil.png" title="Pencil" data-umami-event="pencil button">
+        <img class="eraser" src="Images/eraser.png" title="Eraser" data-umami-event="eraser button">
         <img class="shapes" src="Images/shape.png" title="Shapes">
         <div class = "color-container">
             <div class="color1"></div>
